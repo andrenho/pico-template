@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 include(pico_sdk_import.cmake)
 
-project(poor-man-bus-pirate C CXX ASM)
+project(sample project C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 pico_sdk_init()
@@ -20,9 +20,9 @@ add_custom_target(upload-swd
 )
 
 add_custom_target(upload-usb
-  COMMAND ${CMAKE_SOURCE_DIR}/upload-usb.sh ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.uf2
+	COMMAND ${CMAKE_SOURCE_DIR}/upload-usb.sh ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.uf2
 	DEPENDS ${CMAKE_PROJECT_NAME}
-  COMMENT "Uploading via USB..."
+	COMMENT "Uploading via USB..."
 	VERBATIM
 )
 
